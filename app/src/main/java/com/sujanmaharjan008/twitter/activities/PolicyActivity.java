@@ -8,6 +8,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.sujanmaharjan008.twitter.R;
@@ -17,6 +18,7 @@ public class PolicyActivity extends AppCompatActivity {
     private TextView txtPolicy;
     private EditText edtConfirmName, edtConfirmEmail;
     private Button btnConfirmSignUp;
+    private ImageButton btnImageBackPA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class PolicyActivity extends AppCompatActivity {
         edtConfirmName = findViewById(R.id.edtconfirmName);
         edtConfirmEmail = findViewById(R.id.edtconfirmEmail);
         btnConfirmSignUp = findViewById(R.id.btnConfirmSignUp);
+        btnImageBackPA = findViewById(R.id.imagebtnbackPA);
 
         Bundle bundle = getIntent().getExtras();
 
@@ -43,6 +46,13 @@ public class PolicyActivity extends AppCompatActivity {
                 Intent intent = new Intent(PolicyActivity.this, VerifyCodeActivity.class);
                 intent.putExtra("Name", edtConfirmName.getText().toString());
                 intent.putExtra("Email", edtConfirmEmail.getText().toString());
+                startActivity(intent);
+            }
+        });
+        btnImageBackPA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PolicyActivity.this, CreateAccountActivity.class);
                 startActivity(intent);
             }
         });

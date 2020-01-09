@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.sujanmaharjan008.twitter.R;
@@ -16,6 +17,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     private EditText edtName, edtEmailorPhone;
     private TextView txtEmailorPhone;
     private Button btnNextCAA;
+    private ImageButton btnImageBackCCA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         edtEmailorPhone = findViewById(R.id.edtPhoneOrEmail);
         txtEmailorPhone = findViewById(R.id.btnPhoneOrEmail);
         btnNextCAA = findViewById(R.id.btnNextCAA);
+        btnImageBackCCA = findViewById(R.id.imagebtnbackCAA);
 
         edtEmailorPhone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +53,13 @@ public class CreateAccountActivity extends AppCompatActivity {
                     intent.putExtra("Email",email);
                     startActivity(intent);
                 }
+            }
+        });
+        btnImageBackCCA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CreateAccountActivity.this, LoginOrSignUpActivity.class);
+                startActivity(intent);
             }
         });
     }
