@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.PolicyActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imagebtnback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/round_image_button"
+            android:foregroundGravity="left"
+            android:padding="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_keyboard_backspace_black_24dp" />
+
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/twitterlogoblue"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create your Account"
+        android:textColor="#000000"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="30sp"
+        android:layout_margin="50dp"
+        />
+    <EditText
+        android:id="@+id/edtconfirmName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto"
+        />
+    <EditText
+        android:id="@+id/edtconfirmPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto"
+        />
+    <TextView
+        android:id="@+id/txtPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/policy"
+        android:textColor="#000000"
+        android:textSize="16.5sp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp"
+        />
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/round_buttton"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#FFFFFF"
+        android:text="Sign Up"
+
+        />
+</LinearLayout>
