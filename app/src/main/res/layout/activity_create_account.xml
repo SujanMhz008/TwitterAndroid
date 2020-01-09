@@ -42,6 +42,7 @@
         android:layout_margin="50dp"
         />
     <EditText
+        android:id="@+id/edtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="50dp"
@@ -53,13 +54,14 @@
         android:fontFamily="@font/roboto"
         />
     <EditText
+        android:id="@+id/edtPhoneOrEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginBottom="50dp"
         android:layout_gravity="center"
-        android:hint="Phone number or email address"
+        android:hint="Email address"
         android:fontFamily="@font/roboto"
         />
 
@@ -80,7 +82,8 @@
                 android:id="@+id/btnPhoneOrEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Use email instead"
+                android:text="Use phone instead"
+                android:visibility="invisible"
                 android:textColor="#38A1F3"
                 android:textSize="20sp"
                 android:fontFamily="@font/roboto"
@@ -88,6 +91,7 @@
                 android:layout_marginTop="15dp"
                 />
             <Button
+                android:id="@+id/btnNextCAA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Next"

@@ -54,7 +54,7 @@
         android:fontFamily="@font/roboto"
         />
     <EditText
-        android:id="@+id/edtconfirmPhone"
+        android:id="@+id/edtconfirmEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="50dp"
@@ -76,7 +76,7 @@
         android:layout_marginBottom="20dp"
         />
     <Button
-        android:id="@+id/btnSignUp"
+        android:id="@+id/btnConfirmSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="50dp"
