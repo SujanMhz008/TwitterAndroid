@@ -33,7 +33,7 @@ public class LoginOrSignUpActivity extends AppCompatActivity {
         txtLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginOrSignUpActivity.this, LoginOrSignUpActivity.class);
+                Intent intent = new Intent(LoginOrSignUpActivity.this, LogInActivity.class);
                 startActivity(intent);
             }
         });

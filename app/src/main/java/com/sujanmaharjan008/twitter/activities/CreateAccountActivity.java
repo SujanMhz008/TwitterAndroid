@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,17 +43,18 @@ public class CreateAccountActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String name = edtName.getText().toString();
                 String email = edtEmailorPhone.getText().toString();
-
-                if (!name.equals("")&&!email.equals("")){
-                    btnNextCAA.setClickable(false);
+                if (TextUtils.isEmpty(name)) {
+                    edtName.setError("Please enter your username");
+                    return;
                 }
-                else{
-                    btnNextCAA.setClickable(true);
-                    Intent intent = new Intent(CreateAccountActivity.this, PolicyActivity.class);
-                    intent.putExtra("Name", name);
-                    intent.putExtra("Email",email);
-                    startActivity(intent);
+                else if(TextUtils.isEmpty(email)){
+                    edtEmailorPhone.setError("Please enter your email");
+                    return;
                 }
+                Intent intent = new Intent(CreateAccountActivity.this, PolicyActivity.class);
+                intent.putExtra("Name", name);
+                intent.putExtra("Email", email);
+                startActivity(intent);
             }
         });
         btnImageBackCCA.setOnClickListener(new View.OnClickListener() {

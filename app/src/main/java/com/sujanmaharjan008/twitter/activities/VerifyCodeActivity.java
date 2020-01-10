@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,6 +44,14 @@ public class VerifyCodeActivity extends AppCompatActivity {
                     intent.putExtra("Name", name);
                     intent.putExtra("Email", email);
                     startActivity(intent);
+                }
+                else if(TextUtils.isEmpty(edtCode.getText().toString())){
+                    edtCode.setError("Code must be set");
+                    return;
+                }
+                else {
+                    edtCode.setError("Code must be 555555");
+                    return;
                 }
             }
         });

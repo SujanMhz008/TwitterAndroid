@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,15 +27,14 @@ public class PasswordActivity extends AppCompatActivity {
         edtPassword = findViewById(R.id.edtPassword);
         btnNextPA = findViewById(R.id.btnNextPA);
 
-        if (edtPassword.getText().toString().equals("")) {
-            btnNextPA.setClickable(false);
-        }
-        else {
-            btnNextPA.setClickable(true);
-        }
+
         btnNextPA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(TextUtils.isEmpty(edtPassword.getText().toString())){
+                    edtPassword.setError("Please enter your email");
+                    return;
+                }
                 Bundle bundle = getIntent().getExtras();
                 if(bundle != null){
                     name = bundle.getString("Name");

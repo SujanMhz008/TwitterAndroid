@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,6 +44,14 @@ public class PolicyActivity extends AppCompatActivity {
         btnConfirmSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (TextUtils.isEmpty(edtConfirmName.getText().toString())) {
+                    edtConfirmName.setError("Please enter your username");
+                    return;
+                }
+                else if(TextUtils.isEmpty(edtConfirmEmail.getText().toString())){
+                    edtConfirmEmail.setError("Please enter your email");
+                    return;
+                }
                 Intent intent = new Intent(PolicyActivity.this, VerifyCodeActivity.class);
                 intent.putExtra("Name", edtConfirmName.getText().toString());
                 intent.putExtra("Email", edtConfirmEmail.getText().toString());
