@@ -16,7 +16,7 @@ public class PasswordActivity extends AppCompatActivity {
 
     private EditText edtPassword;
     private Button btnNextPA;
-    private String name, email, password;
+    private String name, email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

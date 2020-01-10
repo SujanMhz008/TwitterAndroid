@@ -16,9 +16,10 @@
             android:id="@+id/imagebtnbackPA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+
             android:background="@drawable/round_image_button"
             android:foregroundGravity="left"
+            android:clickable="true"
             android:padding="10dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_keyboard_backspace_black_24dp" />
