@@ -1,16 +1,16 @@
-package com.sujanmaharjan008.twitter.ui.dashboard;
+package com.sujanmaharjan008.twitter.ui.tools;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class DashboardViewModel extends ViewModel {
+public class ToolsViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public DashboardViewModel() {
+    public ToolsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        mText.setValue("This is tools fragment");
     }
 
     public LiveData<String> getText() {

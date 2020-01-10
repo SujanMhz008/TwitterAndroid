@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.sujanmaharjan008.twitter.BottomNavActivity;
+import com.sujanmaharjan008.twitter.DashboardActivity;
 import com.sujanmaharjan008.twitter.R;
 import com.sujanmaharjan008.twitter.bll.LoginBLL;
 import com.sujanmaharjan008.twitter.strictmode.StrictModeClass;
@@ -54,7 +54,7 @@ public class LogInActivity extends AppCompatActivity {
                 LoginBLL loginBLL = new LoginBLL();
 
                 if (loginBLL.checkUser(edtUserNameL.getText().toString(), edtPasswordL.getText().toString())) {
-                    Intent intent = new Intent(LogInActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LogInActivity.this, DashboardActivity.class);
                     startActivity(intent);
                     finish();
                 }

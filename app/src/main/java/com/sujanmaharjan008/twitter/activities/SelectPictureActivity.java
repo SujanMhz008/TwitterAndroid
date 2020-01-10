@@ -79,6 +79,8 @@ public class SelectPictureActivity extends AppCompatActivity {
             public void onClick(View v) {
                 saveImageOnly();
                 signUp();
+                Intent intent = new Intent(SelectPictureActivity.this, LogInActivity.class);
+                startActivity(intent);
             }
         });
     }
